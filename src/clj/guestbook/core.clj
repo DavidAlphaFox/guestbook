@@ -1,12 +1,13 @@
 (ns guestbook.core
-  (:require [guestbook.handler :as handler]
-            [luminus.repl-server :as repl]
-            [luminus.http-server :as http]
-            [luminus-migrations.core :as migrations]
-            [guestbook.config :refer [env]]
-            [clojure.tools.cli :refer [parse-opts]]
-            [clojure.tools.logging :as log]
-            [mount.core :as mount])
+  (:require
+    [guestbook.handler :as handler]
+    [luminus.repl-server :as repl]
+    [luminus.http-server :as http]
+    [luminus-migrations.core :as migrations]
+    [guestbook.config :refer [env]]
+    [clojure.tools.cli :refer [parse-opts]]
+    [clojure.tools.logging :as log]
+    [mount.core :as mount])
   (:gen-class))
 
 (def cli-options
@@ -55,4 +56,3 @@
       (System/exit 0))
     :else
     (start-app args)))
-  

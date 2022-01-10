@@ -2,7 +2,6 @@
   (:require [guestbook.layout :as layout]
             [compojure.core :refer [defroutes GET POST]]
             [ring.util.http-response :as response]
-            [clojure.java.io :as io]
             [guestbook.db.core :as db]
             [struct.core :as st]))
 
